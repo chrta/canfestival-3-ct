@@ -354,7 +354,7 @@ if [ "$SUB_CAN_DRIVER" = "kvaser" ]; then
             echo "Kvaser driver hasn't been installed (cygwin)"
             exit -1
         fi
-    elif  [ "$SUB_OS_NAME" = "LINUX" ]; then
+    elif  [ "$SUB_OS_NAME" = "Linux" ]; then
         if [ ! -e /usr/lib/libcanlib.so ]; then
             echo "Kvaser driver hasn't been installed (unix)"
             exit -1
@@ -391,7 +391,7 @@ fi
 
 if [ "$SUB_CAN_DRIVER" = "kvaser" ]; then
 	if [ "$SUB_TARGET" = "unix" ]; then
-        if  [ "$SUB_OS_NAME" = "LINUX" ]; then
+        if  [ "$SUB_OS_NAME" = "Linux" ]; then
             SUB_CAN_DLL_CFLAGS=$SUB_CAN_DLL_CFLAGS\ -lcanlib
 		elif [ "$SUB_OS_NAME" = "CYGWIN" ]; then
 	        if [ "$KVASER_INCLUDE_PATH" = "" -o "$KVASER_DLL_PATH" = "" ]; then
